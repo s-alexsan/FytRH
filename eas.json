@@ -1,0 +1,32 @@
+{
+  "cli": {
+    "version": ">=7.3.0",
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "preview": {
+      "android": {
+        "buildType": "apk"
+      }
+    },
+    "preview2": {
+      "android": {
+        "gradleCommand": ":app:assembleRelease"
+      }
+    },
+    "preview3": {
+      "developmentClient": true
+    },
+    "preview4": {
+      "distribution": "internal"
+    },
+    "production": {
+      "ios": {
+        "image": "macos-sequoia-15.3-xcode-16.2"
+      },
+      "env": {
+        "EXPO_NO_REMOTE_VALIDATION": "1"
+      }
+    }
+  }
+}

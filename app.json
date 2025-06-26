@@ -1,0 +1,42 @@
+{
+  "expo": {
+    "name": "FyT - BPO HR",
+    "slug": "fytrequire",
+    "version": "1.0.5",
+    "orientation": "portrait",
+    "owner": "fyt_find_your_hr",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.fyt.fytrequire",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false,
+        "NSMicrophoneUsageDescription": "Este app usa o microfone para permitir que os usuários gravem mensagens de voz para o RH da empresa como parte de um chamado."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.brunosantospk.FyT_Require"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "d9afd151-85d7-4e2a-93a6-74f260cf7c5e"
+      }
+    }
+  }
+}
