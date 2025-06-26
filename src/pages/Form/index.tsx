@@ -89,6 +89,10 @@ export default function Form() {
     async function send() {
         workRecaptcha.current.open();
     }
+    function handleError(error: unknown) {
+        setErrorIndex("captcha");
+        setError(translate.errorCaptcha[selectLang]);
+    }
 
     async function execute() {
         setLoading(true);
@@ -339,6 +343,7 @@ export default function Form() {
                 baseUrl="https://fyt.intelligentsystems.com.br"
                 onVerify={okCaptcha}
                 onExpire={rejectCaptcha}
+                onError={handleError}
                 size="invisible"
             />
 
