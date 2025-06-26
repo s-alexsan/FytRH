@@ -163,4 +163,10 @@ export class Translate {
         es: "Reproduciendo...",
         en: "Playing..."
     }
+
+    errorAppMailNotAvailable: Languages = {
+        pt_br: "O aplicativo de e-mail não está disponível no seu dispositivo.",
+        es: "La aplicación de correo electrónico no está disponible en su dispositivo.",
+        en: "The email app is not available on your device."
+    }
 }

@@ -116,6 +116,12 @@ export default function Form() {
             const dt = new Date();
             const sendDate = `${dt.getDate()}/${dt.getMonth() + 1}/${dt.getFullYear()} ${dt.getHours()}:${dt.getMinutes()}`;
 
+            // verifica se o usuário tem aplicativo de e-mail configurado
+            const isAvailable = await MailComposer.isAvailableAsync();
+            if (!isAvailable) {
+                setError(translate.errorAppMailNotAvailable[selectLang]);
+                return;
+            }
             // Envia e-mail
             const mail = await MailComposer.composeAsync({
                 subject: `${enterprise} - ${unit} - ${name} - ${category} - ${sendDate}`,
